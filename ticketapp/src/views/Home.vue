@@ -17,6 +17,12 @@
              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
              officia deserunt mollit anim id est laborum.
             </p>
+            <v-container fill-height class="mt-16">
+              <v-row align="space-around" justify="center">
+                <v-btn @click="$vuetify.goTo($refs.movies,options)">See our latest Movies</v-btn>
+              </v-row>
+            </v-container>
+            
             
             
           </v-col>
@@ -24,7 +30,7 @@
       </v-container>
     </v-img>
 
-    <v-container class="black lighten-2" fluid>
+    <v-container class="black lighten-2" fluid ref="movies">
       <v-row justify="space-between">
         <v-col cols='4' >
           <v-card color="grey darken-4">
@@ -62,14 +68,15 @@
                   dangerous pill that provides temporary superpowers.
                 </p>
               </v-container>
-              
-              <p></p>
-              <p></p>
-              <p></p>
             </v-flex>
-            
+            <v-card-actions class="my-10 text-center">
+              <v-flex class="text-center">
+                <v-btn>Buy Ticket</v-btn>
+              </v-flex>
+            </v-card-actions>
           </v-card>
         </v-col>
+
         <v-col cols='4' >
           <v-card color="grey darken-4">
             <v-row no-gutters>
@@ -92,10 +99,25 @@
               </v-col>
             </v-row>
             
-            <v-flex class="mx-2 white--text font-weight-bold headline">
-              <p class="">Unhinged</p>
+            <v-flex class="mx-2 white--text ">
+              <p class="font-weight-bold headline">Unhinged</p>
+              <v-container class="grey--text " fluid>
+                <v-row jsutify="space-between">
+                  <v-col>1h30m</v-col>
+                  <v-col>Thriller,Mystery</v-col>
+                  
+                </v-row>
+                <p>
+                  Unhinged is a 2020 American thriller film directed by Derrick Borte, from a screenplay by Carl Ellsworth. 
+                </p>
+              </v-container>
             </v-flex>
-
+            <v-card-actions class="my-10 text-center">
+              <v-flex class="text-center">
+                <v-btn>Buy Ticket</v-btn>
+              </v-flex>
+              
+            </v-card-actions>
             
           </v-card>
         </v-col>
@@ -124,10 +146,23 @@
               </v-col>
             </v-row>
             
-            <v-flex class="mx-2 white--text font-weight-bold headline">
-              Contagion
+            <v-flex class="mx-2 white--text ">
+              <p class="font-weight-bold headline">Contagion</p>
+              <v-container class="grey--text " fluid>
+                <v-row jsutify="space-between">
+                  <v-col>1h46m</v-col>
+                  <v-col>Thriller,Drama</v-col>
+                  
+                </v-row>
+                <p>The death of Beth Emhoff and her son leads to the discovery of a deadly virus. A worldwide panic ensues</p>
+              </v-container>
             </v-flex>
-
+            <v-card-actions class="my-10">
+              <v-flex class="text-center">
+                <v-btn>Buy Ticket</v-btn>
+              </v-flex>
+              
+            </v-card-actions>
             
           </v-card>
         </v-col>
@@ -144,6 +179,15 @@ export default {
   name: "Home",
   components: {
     // HelloWorld
+  },
+  data(){
+    return{
+      options:{
+          duration: 300,
+          offset: 0,
+          easing: 'easeInOutCubic',
+      }
+    }
   }
 };
 </script>
