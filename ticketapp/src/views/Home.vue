@@ -2,24 +2,19 @@
   <span>
     <v-img
     :src="require('../assets/focus-3.jpg')"
-    aspeect-ratio="2"
+    aspeect-ratio="0.8"
     >
       <v-container fill-height>
         <v-row justify="center" align="center">
           <v-col class="white--text" cols="7">
-            <p class="mx-12 display-3 cyan--text font-weight-bold"> Our cinema</p>
+            <p class="mx-16 display-3 cyan--text font-weight-bold"> Our cinema</p>
             <p class="mx-8 font-weight-bold">
-              Lorem ipsum dolor sit amet, 
-            consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-             officia deserunt mollit anim id est laborum.
+              As we thrive to satisfy the needs of our customers,we have improved and redefined our cinema
+              and added dolby digital sound system to create a greater movie experience.
             </p>
             <v-container fill-height class="mt-16">
-              <v-row align="space-around" justify="center">
-                <v-btn flat @click="$vuetify.goTo($refs.movies,options)">See our latest Movies</v-btn>
+              <v-row  class="mx-16">
+                <v-btn text class="blue--text" @click="$vuetify.goTo($refs.movies,options)">See our latest Movies</v-btn>
               </v-row>
             </v-container>
             
@@ -80,9 +75,11 @@
                 
               </v-container>
             </v-flex>
-            <v-card-actions class="my-10 text-center">
+            <v-card-actions class="my-10  text-center">
               <v-flex class="text-center">
-                <v-btn @click="signinDialog = true">Buy Ticket</v-btn>
+                <v-btn @click="signinDialog = true" 
+                class="mb-10"
+                >Buy Ticket</v-btn>
               </v-flex>
             </v-card-actions>
           </v-card>
